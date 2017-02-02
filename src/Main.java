@@ -37,8 +37,8 @@ iniciar mysql: mysql -u root -p
 
     public static void main(String[] args) {
 
-        try
-        {
+        try{
+            //Cargamos el driver mySQL
             Class.forName("com.mysql.jdbc.Driver");
         } catch (Exception e)
         {
@@ -50,7 +50,7 @@ iniciar mysql: mysql -u root -p
 
             Connection conexion = DriverManager.getConnection("jdbc:mysql://172.31.73.191/world?useSSL=true", "root", "aacerete");
 
-            // Preparamos la consulta
+            // Preparamos las consultas y updates
             Statement s = conexion.createStatement();
             ResultSet rs = s.executeQuery ("select NAME from city where id=3");
 

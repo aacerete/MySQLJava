@@ -8,146 +8,162 @@
     <table id="3" parent="1" name="city"/>
     <table id="4" parent="1" name="country"/>
     <table id="5" parent="1" name="countrylanguage"/>
-    <column id="6" parent="3" name="ID">
+    <table id="6" parent="1" name="persona"/>
+    <column id="7" parent="3" name="ID">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <sequence-identity>1</sequence-identity>
     </column>
-    <column id="7" parent="3" name="Name">
+    <column id="8" parent="3" name="Name">
       <mandatory>1</mandatory>
       <data-type>char(35)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="8" parent="3" name="CountryCode">
+    <column id="9" parent="3" name="CountryCode">
       <mandatory>1</mandatory>
       <data-type>char(3)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="9" parent="3" name="District">
+    <column id="10" parent="3" name="District">
       <mandatory>1</mandatory>
       <data-type>char(20)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="10" parent="3" name="Population">
+    <column id="11" parent="3" name="Population">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <default-expression>&apos;0&apos;</default-expression>
     </column>
-    <index id="11" parent="3" name="CountryCode">
+    <index id="12" parent="3" name="CountryCode">
       <columns>CountryCode</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="12" parent="3" name="PRIMARY">
+    <key id="13" parent="3" name="PRIMARY">
       <columns>ID</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="13" parent="3" name="city_ibfk_1">
+    <foreign-key id="14" parent="3" name="city_ibfk_1">
       <columns>CountryCode</columns>
       <ref-key>~.country.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
-    <column id="14" parent="4" name="Code">
+    <column id="15" parent="4" name="Code">
       <mandatory>1</mandatory>
       <data-type>char(3)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="15" parent="4" name="Name">
+    <column id="16" parent="4" name="Name">
       <mandatory>1</mandatory>
       <data-type>char(52)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="16" parent="4" name="Continent">
+    <column id="17" parent="4" name="Continent">
       <mandatory>1</mandatory>
       <data-type>enum(&apos;Asia&apos;, &apos;Europe&apos;, &apos;North America&apos;, &apos;Africa&apos;, &apos;Oceania&apos;, &apos;Antarctica&apos;, &apos;South America&apos;)|0</data-type>
       <default-expression>&apos;Asia&apos;</default-expression>
     </column>
-    <column id="17" parent="4" name="Region">
+    <column id="18" parent="4" name="Region">
       <mandatory>1</mandatory>
       <data-type>char(26)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="18" parent="4" name="SurfaceArea">
+    <column id="19" parent="4" name="SurfaceArea">
       <mandatory>1</mandatory>
       <data-type>float(10,2)|0</data-type>
       <default-expression>&apos;0.00&apos;</default-expression>
     </column>
-    <column id="19" parent="4" name="IndepYear">
+    <column id="20" parent="4" name="IndepYear">
       <data-type>smallint(6)|0</data-type>
     </column>
-    <column id="20" parent="4" name="Population">
+    <column id="21" parent="4" name="Population">
       <mandatory>1</mandatory>
       <data-type>int(11)|0</data-type>
       <default-expression>&apos;0&apos;</default-expression>
     </column>
-    <column id="21" parent="4" name="LifeExpectancy">
+    <column id="22" parent="4" name="LifeExpectancy">
       <data-type>float(3,1)|0</data-type>
     </column>
-    <column id="22" parent="4" name="GNP">
+    <column id="23" parent="4" name="GNP">
       <data-type>float(10,2)|0</data-type>
     </column>
-    <column id="23" parent="4" name="GNPOld">
+    <column id="24" parent="4" name="GNPOld">
       <data-type>float(10,2)|0</data-type>
     </column>
-    <column id="24" parent="4" name="LocalName">
+    <column id="25" parent="4" name="LocalName">
       <mandatory>1</mandatory>
       <data-type>char(45)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="25" parent="4" name="GovernmentForm">
+    <column id="26" parent="4" name="GovernmentForm">
       <mandatory>1</mandatory>
       <data-type>char(45)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="26" parent="4" name="HeadOfState">
+    <column id="27" parent="4" name="HeadOfState">
       <data-type>char(60)|0</data-type>
     </column>
-    <column id="27" parent="4" name="Capital">
+    <column id="28" parent="4" name="Capital">
       <data-type>int(11)|0</data-type>
     </column>
-    <column id="28" parent="4" name="Code2">
+    <column id="29" parent="4" name="Code2">
       <mandatory>1</mandatory>
       <data-type>char(2)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <key id="29" parent="4" name="PRIMARY">
+    <key id="30" parent="4" name="PRIMARY">
       <columns>Code</columns>
       <primary>1</primary>
     </key>
-    <column id="30" parent="5" name="CountryCode">
+    <column id="31" parent="5" name="CountryCode">
       <mandatory>1</mandatory>
       <data-type>char(3)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="31" parent="5" name="Language">
+    <column id="32" parent="5" name="Language">
       <mandatory>1</mandatory>
       <data-type>char(30)|0</data-type>
       <default-expression>&apos;&apos;</default-expression>
     </column>
-    <column id="32" parent="5" name="IsOfficial">
+    <column id="33" parent="5" name="IsOfficial">
       <mandatory>1</mandatory>
       <data-type>enum(&apos;T&apos;, &apos;F&apos;)|0</data-type>
       <default-expression>&apos;F&apos;</default-expression>
     </column>
-    <column id="33" parent="5" name="Percentage">
+    <column id="34" parent="5" name="Percentage">
       <mandatory>1</mandatory>
       <data-type>float(4,1)|0</data-type>
       <default-expression>&apos;0.0&apos;</default-expression>
     </column>
-    <index id="34" parent="5" name="CountryCode">
+    <index id="35" parent="5" name="CountryCode">
       <columns>CountryCode</columns>
       <desc-columns></desc-columns>
     </index>
-    <key id="35" parent="5" name="PRIMARY">
+    <key id="36" parent="5" name="PRIMARY">
       <columns>CountryCode
 Language</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="36" parent="5" name="countryLanguage_ibfk_1">
+    <foreign-key id="37" parent="5" name="countryLanguage_ibfk_1">
       <columns>CountryCode</columns>
       <ref-key>~.country.PRIMARY</ref-key>
       <cascade-update-rule>restrict</cascade-update-rule>
       <cascade-delete-rule>restrict</cascade-delete-rule>
     </foreign-key>
+    <column id="38" parent="6" name="ID">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <column id="39" parent="6" name="Nombre">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="40" parent="6" name="Apellido">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="41" parent="6" name="Edad">
+      <data-type>varchar(3)|0</data-type>
+    </column>
+    <column id="42" parent="6" name="Sexo">
+      <data-type>varchar(1)|0</data-type>
+    </column>
   </database-model>
 </dataSource>
